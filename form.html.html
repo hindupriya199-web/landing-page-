@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Webpage</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: capitalize;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 50px auto;           
+      padding: 30px;               
+      background-color: #f4f4f4;   
+      border-radius: 10px;         
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;          
+      font-weight: bold;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form select,
+    form textarea {
+      width: 100%;                 
+      padding: 12px 15px;          
+      margin-bottom: 20px;      
+      border: 1px solid #ccc;      
+      border-radius: 5px;         
+      font-size: 16px;
+      outline: none;
+    }
+
+    .radio-group {
+      margin-bottom: 20px;
+    }
+
+    .radio-group input[type="radio"] {
+      margin-right: 5px;   
+    }
+
+    .radio-group label {
+      margin-right: 15px;  
+      font-weight: normal;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 10px; 
+      width: 18px;
+      height: 18px;
+    }
+
+    
+    input[type="submit"] {
+      width: 100%;                 
+      padding: 20px;           
+      background-color: #170f6e;
+      color: white;
+      font-size: 24px;        
+      border: none;
+      border-radius: 10px;    
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0f0a5c;
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 600px){
+      form {
+        padding: 20px;
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <p style="text-align:center; font-size:25px;text-transform: capitalize;">You are required to fill the following details</p>
+
+  <form action="source.html">
+    <label>Name</label>
+    <input type="text" required placeholder="First Name">
+
+    <label>Email</label>
+    <input type="email" required placeholder="Valid Email">
+
+    <label>Phone Number</label>
+    <input type="tel" required placeholder="Phone Number">
+
+    <label>City/State</label>
+    <input type="text" required placeholder="City or State">
+
+    <label>Country</label>
+    <input type="text" placeholder="Country">
+
+    <!-- Radio Buttons -->
+    <div class="radio-group">
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="checkbox-group">
+      <input type="checkbox" id="agree" required>
+      <label for="agree">I Agree To The Terms and Conditions</label>
+    </div>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
